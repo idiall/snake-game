@@ -58,6 +58,20 @@ snake_game/
 - Snake uses deque for O(1) head/tail operations; set is used for O(1) occupancy checks.
 - Code is typed; run mypy/ruff/black as needed (configured in `pyproject.toml`).
 
+## Usage
+- Activate venv and run:
+  - `python -m snake_game` (defaults)
+- Optional speed flags:
+  - `--tick <int>` base tick rate (updates/sec). Default: 6
+  - `--speed-step <int>` increment in tick rate per threshold. Default: 1
+  - `--speed-score-step <int>` score per speed increase. Default: 5
+  - `--speed-max <int>` maximum tick rate. Default: 14
+
+Example:
+```
+python -m snake_game --tick 6 --speed-step 1 --speed-score-step 5 --speed-max 14
+```
+
 ## Roadmap
 - High score persistence (JSON)
 - Sounds and custom font
